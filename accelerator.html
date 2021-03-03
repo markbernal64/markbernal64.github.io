@@ -1,0 +1,151 @@
+<!DOCTYPE HTML>
+<!--
+	Spectral by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>NLP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="wrapper">
+                <!-- Header -->
+					<header id="header">
+						<div class="content">
+							<div class="inner">
+								<h1>NLP Hardware Accelerator</h1>
+								<p>Natural Language Processing Hardware Accelerator</p>
+							</div>
+						</div>
+						<nav>
+							<ul>
+								<li><a href="index.html">Home</a></li>							
+							</ul>
+						</nav>
+					</header>
+				
+				
+				<!-- Intro -->
+                    <article id="intro">
+                        <h2 class="major">Intro</h2>
+                        <p> 
+							Natural Language Processing is a large category in Artificial Intelligence.
+							It allows for use to communicate with technology and for technology to analyze
+							language data efficiently.
+							This computation can take time with large scale projects, and our job was to improve performance speeds
+							using a hardware accelerator. This would have been showcased using an FPGA board
+							for proof of application.
+						</p>
+                        <p> 
+							My team consisted of three other engineering students and myself. This was the largest project
+							I worked on and my first real introduction to the design process in a team setting. We constantly brain stormed,
+							helped each other with different approaches, and if we were stuck with our design, we would ask
+							each other for help.
+						</p>
+                    </article>
+
+                <!-- Solution -->
+                    <article id="solution">
+                        <h2 class="major">Solution</h2>
+                        <span class="major"><img src="images/pic02.jpg" alt=""></span>
+                        <p>This project consisted of 4 subsystems, and the subsystem I was in charge of was the
+							Compact Random Forest Classifier(CRF) Core. The reason I chose to implement a random forest in hardware
+							is because our task was Text Classification and Named Entity Recognition.
+						</p>
+						<p>
+							Normally a sRandom Forest Classifier would span way too large for it to be implemented
+							on an FPGA; however, I found a research paper discussing the applications of an Compact
+							Random Forest.
+						</p>
+						<p>
+							Additionally, the initial application used in the research paper wasn't applied to NLP.
+							So I learned about word embeddings and how they can turn words into vectors. This allows
+							for computers to not only recognize a word but also associate similarities and meanings.
+						</p>
+						<p>
+							The solution I used was to train a compact random forest using large data sets of word vectors
+							in python initially. After the model was trained and accurate enough, I would have downloaded .
+							Then upload the threshold values to the hardware implementation.
+						</p>
+                    </article>
+
+                <!-- Architecture -->
+                    <article id="architecture">
+                        <h2 class="major">Architecture</h2>
+                        <span class="image main"><img src="images/pic03.jpg" alt="" /></span>
+                        <p> Here is the overall architecture of a CRF on an FPGA.</p>
+
+						<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
+						<p> Here is the architecture I designed for addressing both NER and Text Classification.
+							I wanted the design to run both Text Classification and Named Entity Recognition at
+							the same time. That resulted in two separate 
+						</p>
+
+						<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
+                    </article>
+
+				<!-- Software Implementation-->
+					<article id="software">
+						<h2 class="major">Software</h2>
+						<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
+                        <p> Here is the word vector diagrams. </p>
+
+						<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
+						<p> Here is the diagram of the RF model.</p>
+
+						<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
+						<p> Here is the accuracy of the model in software implementation</p>
+					</article>
+
+				<!-- Hardware Implementation-->
+					<article id="hardware">
+						<h2 class="major">Hardware</h2>
+						<p>Unfortunately, due to the pandemic this project was cut short before 
+							I was able to implement these concepts onto hardware. However, I was
+							able to code and verify the project in Verilog, which you can find on
+							my github alongside the software implementation of the code.
+						</p>
+					</article>
+
+                <!-- Sources -->
+                    <article id="sources">
+                        <h2 class="major">Sources</h2>
+						<ol>
+							<li>B. Van Essen, C. Macaraeg, M. Gokhale and R. Prenger, "Accelerating a Random Forest Classifier: Multi-Core, GP-GPU, or FPGA?," 2012 IEEE 20th International Symposium on Field-Programmable Custom Computing Machines, Toronto, ON, Canada, 2012, pp. 232-239, doi: 10.1109/FCCM.2012.47</li>
+							<li>Mikolov, T., Chen, K., Corrado, G.S., & Dean, J. (2013). "Efficient Estimation of Word Representations in Vector Space." ICLR.</li>
+						</ol> 
+                    </article>
+
+
+				<!-- Footer -->
+					<footer id="footer">
+						<ul class="icons">
+							<li><a href="#" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li>
+							<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+							<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+						</ul>
+						<ul class="copyright">
+							<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						</ul>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
