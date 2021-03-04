@@ -21,7 +21,7 @@
 						<div class="content">
 							<div class="inner">
 								<h1>Single Cycle ARM Processor</h1>
-								<p>Implementing ARM architecture in Verilog</p>
+								<p>Implementing a Single Cycle ARM processor in Verilog</p>
 							</div>
 						</div>
 						<nav>
@@ -35,10 +35,10 @@
 				<!-- Intro -->
                     <article id="intro">
                         <h2 class="major">Intro</h2>
-                        <p>The project's goal was to gain a strong understanding of ARMv8 assembly 
-							language and ARM Architecture. The main challenges were understanding
-							different,<br> 
-							instructions and how to identity the differences.
+                        <p>The goal of this project was to gain a strong understanding of ARMv8 assembly 
+							language and ARM Architecture. The main challenges for me was understanding <br>
+							different instructions, their purpose, and how addressing memory worked with 
+							certain instructions.
 						</p>
                     </article>
 
@@ -53,8 +53,9 @@
 						</p>
 
 						<p>
-							Here is the architecture that I followed. This textbook was really helpful in 
-							learning about assembly language and 
+							Here is a picture of the ARM architecture that I used as my main reference. This 
+							textbook was really helpful in learning about assembly language and how a simple <br>
+							processor functioned.
 						</p>
 						<section>
 							<h3>Components</h3>
@@ -72,10 +73,20 @@
                 <!-- Testbenches -->
                     <article id="testbenches">
                         <h2 class="major">Testbenches</h2>
-                        <div class="image main"><img src="images/pic03.jpg" alt="" height="350"/></div>
-                        <p></p>
+						
+						<div class="image main"><img src="images/armproc_result.jpg" alt=""  width="1" height="800"/></div>
+                        <p> 
+							Here I have included the terminal verifying the results for both tests. The testbench 
+							here just gives the processor a start address, reset signal, and clock signal. From <br> 
+							there it just reads the current address in the instruction memory. The processor then 
+							reads the instructions from the instruction memory and has to correctly perform<br> 
+							the assembly code. If performed correctly, the information read from data memory will 
+							be correct. Because both tests passed, we know that the processor functions <br> 
+							as intended.
+						 </p>
+                        
 						<section>
-							<h3>Component Testbenches</h3>
+							<h3>Final Testbench</h3>
 							<ul>
 								<!-- 
 								<li><a href="https://github.com/markbernal64/verilog_portfolio/blob/main/ARM_PC/ALU.v" target="_blank" rel="noopener noreferrer">ALU</a></li>
